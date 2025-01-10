@@ -19,11 +19,11 @@ const TicketsPage = async ({ searchParams }: TicketsPageProps) => {
 
   return (
     <div className="flex-1 flex flex-col gap-y-8">
-      <Heading title="My Tickets" description="All your tickets at one place" />
+      <Heading title="我的诊断" description="你的所有诊断记录" />
 
       <CardCompact
-        title="Create Ticket"
-        description="A new ticket will be created."
+        title="新建诊断"
+        description="将创建一个新的诊断"
         className="w-full max-w-[420px] self-center"
         content={<TicketUpsertForm />}
       />

@@ -33,17 +33,17 @@ const TicketEditPage = async ({ params }: TicketEditPageProps) => {
     <div className="flex-1 flex flex-col gap-y-8">
       <Breadcrumbs
         breadcrumbs={[
-          { title: "Tickets", href: homePath() },
+          { title: "所有诊断", href: homePath() },
           { title: ticket.title, href: ticketPath(ticket.id) },
-          { title: "Edit" },
+          { title: "修改" },
         ]}
       />
 
       <Separator />
       <div className="flex-1 flex flex-col justify-center items-center">
         <CardCompact
-          title="Edit Ticket"
-          description="Edit an existing ticket"
+          title="修改诊断"
+          description="编辑现有的诊断记录"
           className="w-full max-w-[420px] animate-fade-in-from-top"
           content={<TicketUpsertForm ticket={ticket} />}
         />

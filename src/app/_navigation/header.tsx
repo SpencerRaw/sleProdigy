@@ -25,13 +25,13 @@ const Header = () => {
         href={signUpPath()}
         className={buttonVariants({ variant: "outline" })}
       >
-        Sign Up
+        注册
       </Link>
       <Link
         href={signInPath()}
         className={buttonVariants({ variant: "default" })}
       >
-        Sign In
+        登录
       </Link>
     </>
   );

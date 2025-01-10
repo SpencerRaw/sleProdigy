@@ -5,8 +5,8 @@ const PasswordPage = () => {
   return (
     <div className="flex-1 flex flex-col gap-y-8">
       <Heading
-        title="Password"
-        description="Keep your account secure"
+        title="密码"
+        description="注意账户安全！"
         tabs={<AccountTabs />}
       />
     </div>

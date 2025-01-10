@@ -25,18 +25,18 @@ const TicketList = async ({ userId, searchParams }: TicketListProps) => {
   return (
     <div className="flex-1 flex flex-col items-center space-y-4 animate-fade-in-from-top">
       <div className="w-full max-w-[420px] flex gap-x-2">
-        <TicketSearchInput placeholder="Search tickets ..." />
+        <TicketSearchInput placeholder="诊断搜索🔍 ..." />
         <TicketSortSelect
           options={[
             {
               sortKey: "createdAt",
               sortValue: "desc",
-              label: "Newest",
+              label: "最新",
             },
             {
               sortKey: "createdAt",
               sortValue: "asc",
-              label: "Oldest",
+              label: "最早",
             },
             {
               sortKey: "bounty",
@@ -49,7 +49,7 @@ const TicketList = async ({ userId, searchParams }: TicketListProps) => {
       {tickets.length ? (
         tickets.map((ticket) => <TicketItem key={ticket.id} ticket={ticket} />)
       ) : (
-        <Placeholder label="No tickets found" />
+        <Placeholder label="没有诊断" />
       )}
 
       <div className="w-full max-w-[420px]">

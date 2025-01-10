@@ -29,7 +29,7 @@ const TicketMoreMenu = ({ ticket, trigger }: TicketMoreMenuProps) => {
     trigger: (
       <DropdownMenuItem>
         <LucideTrash className="mr-2 h-4 w-4" />
-        <span>Delete</span>
+        <span>删除</span>
       </DropdownMenuItem>
     ),
   });

@@ -26,25 +26,25 @@ const AccountDropdown = ({ user }: AccountDropdownProps) => {
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuLabel>我的账户</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
           <Link href={accountProfilePath()}>
             <LucideUser className="mr-2 h-4 w-4" />
-            <span>Profile</span>
+            <span>个人账户</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link href={accountPasswordPath()}>
             <LucideLock className="mr-2 h-4 w-4" />
-            <span>Password</span>
+            <span>密码</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
           <form action={signOut}>
             <LucideLogOut className="mr-2 h-4 w-4" />
-            <button type="submit">Sign Out</button>
+            <button type="submit">登出</button>
           </form>
         </DropdownMenuItem>
       </DropdownMenuContent>

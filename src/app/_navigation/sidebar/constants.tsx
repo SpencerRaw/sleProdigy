@@ -4,18 +4,18 @@ import { LucideBook, LucideCircleUser, LucideLibrary } from "lucide-react";
 
 export const navItems: NavItem[] = [
   {
-    title: "All Tickets",
+    title: "所有诊断",
     icon: <LucideLibrary />,
     href: homePath(),
   },
   {
-    title: "My Tickets",
+    title: "我的诊断",
     icon: <LucideBook />,
     href: ticketsPath(),
   },
   {
     separator: true,
-    title: "Account",
+    title: "账户",
     icon: <LucideCircleUser />,
     href: accountProfilePath(),
   },

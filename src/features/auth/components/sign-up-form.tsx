@@ -14,14 +14,14 @@ const SignUpForm = () => {
     <Form action={action} actionState={actionState}>
       <Input
         name="username"
-        placeholder="Username"
+        placeholder="用户名"
         defaultValue={actionState.payload?.get("username") as string}
       />
       <FieldError actionState={actionState} name="username" />
 
       <Input
         name="email"
-        placeholder="Email"
+        placeholder="电子邮件"
         defaultValue={actionState.payload?.get("email") as string}
       />
       <FieldError actionState={actionState} name="email" />
@@ -29,7 +29,7 @@ const SignUpForm = () => {
       <Input
         type="password"
         name="password"
-        placeholder="Password"
+        placeholder="密码"
         defaultValue={actionState.payload?.get("password") as string}
       />
       <FieldError actionState={actionState} name="password" />
@@ -37,12 +37,12 @@ const SignUpForm = () => {
       <Input
         type="password"
         name="confirmPassword"
-        placeholder="Confirm Password"
+        placeholder="确定密码"
         defaultValue={actionState.payload?.get("confirmPassword") as string}
       />
       <FieldError actionState={actionState} name="confirmPassword" />
 
-      <SubmitButton label="Sign Up" />
+      <SubmitButton label="注册" />
     </Form>
   );
 };

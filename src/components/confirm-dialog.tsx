@@ -23,8 +23,8 @@ type UseConfirmDialogProps = {
 };
 
 const useConfirmDialog = ({
-  title = "Are you absolutely sure?",
-  description = "This action cannot be undone. Make sure you understand the consequences.",
+  title = "你确定删除吗？",
+  description = "此操作无法撤销，请确保你已了解后果",
   action,
   trigger,
 }: UseConfirmDialogProps) => {
@@ -51,14 +51,14 @@ const useConfirmDialog = ({
           <AlertDialogDescription>{description}</AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogCancel>取消</AlertDialogCancel>
           <AlertDialogAction asChild>
             <Form
               action={formAction}
               actionState={actionState}
               onSuccess={handleSuccess}
             >
-              <SubmitButton label="Confirm" />
+              <SubmitButton label="确定" />
             </Form>
             {/* <form
               onSubmit={async (e) => {

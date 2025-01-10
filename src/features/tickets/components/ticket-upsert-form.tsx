@@ -94,7 +94,7 @@ const TicketUpsertForm = ({ ticket }: TicketUpsertFormProps) => {
         </div>
       </div>
 
-      <SubmitButton label={ticket ? "Edit" : "Create"} />
+      <SubmitButton label={ticket ? "编辑" : "创建"} />
       {/* {actionState.message} */}
     </Form>
   );

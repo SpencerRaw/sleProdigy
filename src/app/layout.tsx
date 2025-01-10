@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The SLE Prodigy",
-  description: "My road to next application ...",
+  title: "狼疮智诊",
+  description: "精准+便捷+智能 SLE诊断 ...",
 };
 
 export default function RootLayout({

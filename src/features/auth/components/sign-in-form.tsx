@@ -14,7 +14,7 @@ const SignInForm = () => {
     <Form action={action} actionState={actionState}>
       <Input
         name="email"
-        placeholder="Email"
+        placeholder="邮件"
         defaultValue={actionState.payload?.get("email") as string}
       />
       <FieldError actionState={actionState} name="email" />
@@ -22,12 +22,12 @@ const SignInForm = () => {
       <Input
         type="password"
         name="password"
-        placeholder="Password"
+        placeholder="密码"
         defaultValue={actionState.payload?.get("password") as string}
       />
       <FieldError actionState={actionState} name="password" />
 
-      <SubmitButton label="Sign In" />
+      <SubmitButton label="登录" />
     </Form>
   );
 };

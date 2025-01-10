@@ -7,21 +7,21 @@ const SignInPage = () => {
   return (
     <div className="flex-1 flex flex-col justify-center items-center">
       <CardCompact
-        title="Sign In"
-        description="Sign in to your account"
+        title="登录"
+        description="登录你的账号"
         className="w-full max-w-[420px] animate-fade-from-top"
         content={<SignInForm />}
         footer={
           <>
             <Link className="text-sm text-muted-foreground" href={signUpPath()}>
-              No account yet?
+              还没有账号？
             </Link>
 
             <Link
               className="text-sm text-muted-foreground"
               href={passwordForgotPath()}
             >
-              Forgot Password?
+              忘记密码？
             </Link>
           </>
         }

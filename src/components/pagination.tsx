@@ -52,7 +52,7 @@ PaginationProps) => {
       //   disabled={false}
       onClick={handlePreviousPage}
     >
-      Previous
+      上一页
     </Button>
   );
 
@@ -64,7 +64,7 @@ PaginationProps) => {
       //   disabled={false}
       onClick={handleNextPage}
     >
-      Next
+      下一页
     </Button>
   );
 
