@@ -6,12 +6,12 @@ const prisma = new PrismaClient();
 const users = [
     {
       username: "admin",
-      email: "admin@admin.com",
+      phoneNumber: "4008823823",
     },
     {
       username: "user",
-      // use your own email here
-      email: "spencerxu79@gmail.com",
+      
+      phoneNumber: "13646191528",
     },
   ];
 

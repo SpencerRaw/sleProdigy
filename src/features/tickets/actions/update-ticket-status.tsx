@@ -41,5 +41,5 @@ export const updateTicketStatus = async (id: string, status: TicketStatus) => {
 
   revalidatePath(ticketsPath());
 
-  return toActionState("SUCCESS", "Status updated");
+  return toActionState("SUCCESS", "状态已更新");
 };

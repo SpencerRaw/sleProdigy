@@ -7,7 +7,7 @@ export const TICKET_ICONS = {
 };
 
 export const TICKET_STATUS_LABELS = {
-  OPEN: "Open",
-  DONE: "Done",
-  IN_PROGRESS: "In Progress",
+  OPEN: "待诊",
+  DONE: "已完成",
+  IN_PROGRESS: "诊断中",
 };

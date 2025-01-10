@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "狼疮智诊",
-  description: "精准+便捷+智能 SLE诊断 ...",
+  title: "青囊智疗",
+  description: "精准+便捷+引导 SLE诊断 ...",
 };
 
 export default function RootLayout({

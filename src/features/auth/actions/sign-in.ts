@@ -9,28 +9,29 @@ import { lucia } from "@/lib/lucia";
 import { cookies } from "next/headers";
 
 const signInSchema = z.object({
-    email: z.string().min(1, { message: "Is required" }).max(191).email(),
+    // email: z.string().min(1, { message: "Is required" }).max(191).email(),
+    phoneNumber: z.string().min(1, { message: "Is required" }).max(15, { message: "Must be 15 characters or less" }).regex(/^\+?[1-9]\d{1,14}$/, { message: "Invalid phone number" }),
     password: z.string().min(6).max(191),
   });
 
   export const signIn = async (_actionState: ActionState, formData: FormData) => {
     try {
-      const { email, password } = signInSchema.parse(
+      const { phoneNumber, password } = signInSchema.parse(
         Object.fromEntries(formData)
       );
 
       const user = await prisma.user.findUnique({
-        where: { email },
+        where: { phoneNumber },
       });
 
       if (!user) {
-        return toActionState("ERROR", "Incorrect email or password",formData);
+        return toActionState("ERROR", "手机或者密码错误",formData);
       }
 
       const validPassword = await verify(user.passwordHash, password);
 
       if (!validPassword) {
-        return toActionState("ERROR", "Incorrect email or password",formData);
+        return toActionState("ERROR", "手机或者密码错误",formData);
       }
 
       const session = await lucia.createSession(user.id,{});

@@ -38,7 +38,7 @@ const TicketMoreMenu = ({ ticket, trigger }: TicketMoreMenuProps) => {
     const promise = updateTicketStatus(ticket.id, value as TicketStatus);
 
     toast.promise(promise, {
-      loading: "Updating status...",
+      loading: "更新状态中...",
     });
 
     const result = await promise;

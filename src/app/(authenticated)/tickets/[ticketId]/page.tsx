@@ -23,7 +23,7 @@ const TicketPage = async ({ params }: TicketPageProps) => {
     <div className="flex-1 flex flex-col gap-y-8">
       <Breadcrumbs
         breadcrumbs={[
-          { title: "Tickets", href: homePath() },
+          { title: "诊断", href: homePath() },
           { title: ticket.title },
         ]}
       />

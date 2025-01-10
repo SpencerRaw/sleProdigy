@@ -20,11 +20,11 @@ const SignUpForm = () => {
       <FieldError actionState={actionState} name="username" />
 
       <Input
-        name="email"
-        placeholder="电子邮件"
-        defaultValue={actionState.payload?.get("email") as string}
+        name="phoneNumber"
+        placeholder="电话号码"
+        defaultValue={actionState.payload?.get("phoneNumber") as string}
       />
-      <FieldError actionState={actionState} name="email" />
+      <FieldError actionState={actionState} name="phoneNumber" />
 
       <Input
         type="password"

@@ -20,7 +20,8 @@ const signUpSchema = z
         (value) => !value.includes(" "),
         "Username cannot contain spaces"
       ),
-    email: z.string().min(1, { message: "Is required" }).max(191).email(),
+    // email: z.string().min(1, { message: "Is required" }).max(191).email(),
+    phoneNumber: z.string().min(1, { message: "Is required" }).max(15, { message: "Must be 15 characters or less" }).regex(/^\+?[1-9]\d{1,14}$/, { message: "Invalid phone number" }),
     password: z.string().min(6).max(191),
     confirmPassword: z.string().min(6).max(191),
   })
@@ -36,7 +37,7 @@ const signUpSchema = z
 
   export const signUp = async (_actionState: ActionState, formData: FormData) => {
     try {
-    const { username, email, password } = signUpSchema.parse(
+    const { username, phoneNumber, password } = signUpSchema.parse(
         Object.fromEntries(formData)
       );
 
@@ -45,7 +46,7 @@ const signUpSchema = z
       const user = await prisma.user.create({
         data: {
           username,
-          email,
+          phoneNumber,
           passwordHash,
         },
       });
@@ -66,7 +67,7 @@ const signUpSchema = z
           ) {
             return toActionState(
               "ERROR",
-              "Either email or username is already in use",
+              "电话或用户名已存在，请勿重复",
               formData
             );
           }

@@ -3,7 +3,11 @@
 import { homePath, ticketsPath, signInPath, signUpPath } from "@/path";
 import Link from "next/link";
 import { Button, buttonVariants } from "../../components/ui/button";
-import { LucideAlignHorizontalSpaceAround, LucideLogOut } from "lucide-react";
+import {
+  LucideAlignHorizontalSpaceAround,
+  LucideLogOut,
+  LucideShoppingBag,
+} from "lucide-react";
 import { ThemeSwitcher } from "../../components/theme/theme-switcher";
 import { SubmitButton } from "../../components/form/submit-button";
 import { signOut } from "@/features/auth/actions/sign-out";
@@ -50,15 +54,14 @@ const Header = () => {
       <div className="flex align-items gap-x-2">
         <Button asChild variant="ghost">
           <Link href={homePath()}>
-            <LucideAlignHorizontalSpaceAround />
-            <h1 className="ml-2 text-lg font-semibold">sleProdigy</h1>
+            <LucideShoppingBag />
+            <h1 className="ml-2 text-lg font-semibold">青囊智疗 SLE</h1>
           </Link>
         </Button>
       </div>
       <div className="flex align-items gap-x-2">
         <ThemeSwitcher />
         {navItems}
-        {/* </Button> */}
       </div>
     </nav>
   );

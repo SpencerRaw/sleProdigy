@@ -33,6 +33,6 @@ export const deleteTicket = async (id:string) => {
       return fromErrorToActionState(error);
     }
     revalidatePath(ticketsPath())
-    setCookieByKey("toast","Ticket deleted")
+    setCookieByKey("toast","诊断已删除")
     redirect(ticketsPath())
   };
