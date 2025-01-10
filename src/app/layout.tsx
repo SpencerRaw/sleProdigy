@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Road Next",
+  title: "The SLE Prodigy",
   description: "My road to next application ...",
 };
 
